@@ -383,7 +383,7 @@ GameObject:
   - component: {fileID: 1242069966}
   - component: {fileID: 1242069965}
   - component: {fileID: 1242069967}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1262,8 +1262,8 @@ Tilemap:
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 0.6613234, b: 0, a: 1}
-  m_Origin: {x: -10, y: -4, z: 0}
-  m_Size: {x: 33, y: 8, z: 1}
+  m_Origin: {x: -10, y: -5, z: 0}
+  m_Size: {x: 33, y: 9, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
   m_TileOrientation: 0
   m_TileOrientationMatrix:
@@ -1333,6 +1333,7 @@ GameObject:
   - component: {fileID: 1367345053}
   - component: {fileID: 1367345052}
   - component: {fileID: 1367345051}
+  - component: {fileID: 1367345055}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -1471,7 +1472,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1367345050}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -6, y: -2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1479,6 +1480,25 @@ Transform:
   - {fileID: 1180294048}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1367345055
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1367345050}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23227c6085d6d6d40899de8aa5438522, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
+  moveSpeed: 6
+  jumpForce: 12
+  groundCheck: {fileID: 1180294048}
+  groundRadius: 0.2
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!1 &1717253103
 GameObject:
   m_ObjectHideFlags: 0
@@ -1489,7 +1509,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1717253105}
   - component: {fileID: 1717253104}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Grid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
